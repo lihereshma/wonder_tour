@@ -226,6 +226,15 @@ h2 span {
   letter-spacing: 0.5px;
   transition: 0.5s ease;
 }
+
+.blue-button {
+  padding: 17px 4.5%;
+  border: 2px solid;
+  color: #fff;
+  font-size: 17px;  
+  letter-spacing: 0.5px;
+  transition: 0.5s ease;
+}
 /*=================================
   banner section styling ends here
 =================================*/
@@ -300,13 +309,84 @@ h2 span {
 /*=================================
   about section styling starts here
 =================================*/ 
+.about .tab-content > li:not(:first-child) { display: none; }
 
+.about .wrapper { width: 89%; }
 
+.black-button::first-letter, .blue-button::first-letter { text-transform: capitalize; }
 
+.about .blue-button { margin-right: 15px; }
 
+.about-wrapper > li { width: 48.2%; }
 
+.about-wrapper, .tab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
 
+.about-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 45px 3.8% 0;
+}
 
+h3 {
+  margin-bottom: 25px;
+  font: 600 32.5px 'sans-serif';
+  text-transform: capitalize;
+}
+
+.tab a {
+  padding-bottom: 7px;
+  border-bottom: 3px solid #e0e0e0;
+  color: #bbadab;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; 
+  -webkit-transition: 0.5s ease; 
+  -o-transition: 0.5s ease; 
+  transition: 0.5s ease;
+}
+
+.tab-list .active-tab {
+  border-bottom: 3px solid #3cb2a5;
+  color: #3cb2a5;
+}
+
+.tab-content p {
+  margin: 30px 0 35px;
+  color: #7c7c7c;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+}
+
+.black-button {
+  padding: 18px 42px;
+  border: 2px solid;
+  color: #000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.blue-button {
+  padding: 18px 42px;
+  border: 2px solid #3cb2a5;
+  background-color: #3cb2a5;
+  color: #fff; 
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 /*=================================
   about section styling ends here
 =================================*/ 
@@ -354,11 +434,27 @@ h2 span {
     background-color: #384859;  
   }
 
-  .white-button:hover {
+  .banner .white-button:hover {
     border: 2px solid #3cb2a5;
     background-color: #3cb2a5;
     color: #fff;
   }  
+
+  .tab a:hover {
+    border-bottom: 3px solid #3cb2a5;
+    color: #3cb2a5;
+  }
+
+  .black-button:hover {
+    background-color: #3cb2a5;
+    color: #fff;
+  }
+
+  .blue-button:hover {
+    border: 2px solid;
+    background-color: #fff;
+    color: #000;
+  }
 }  
 
 /*media query for 995px starts here*/
