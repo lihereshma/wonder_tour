@@ -106,12 +106,64 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+.hamburger, .logo, .ellipsis { display: none; }
 
+header { background-color: #1f3145; }
 
+.menu ul li { margin-right: 14px; }
 
+.social-icons li { margin: 2px 15px 0 0; }
 
+.social-icons li:last-of-type { padding-right: 0; }
 
+.facebook::before { content: "\f09a"; }
 
+.twitter::before { content: "\f099"; }
+
+.instagram::before { content: "\f16d"; }
+
+.googleplus::before { content: "\f0d5"; }
+
+header .wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.menu li a {
+  padding: 18px 16px;
+  border-top: 2px solid #162e44;
+  color: #fff;  
+  font-size: 17px;
+  letter-spacing: 1px; 
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.facebook, .twitter, .googleplus, .instagram { 
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.facebook::before, .twitter::before, .instagram::before, .googleplus::before {
+  font-family: 'FontAwesome';
+  float: right;
+  text-indent: 0;
+  transition: 0.5s ease;
+}
+
+.menu .active-menu {
+  border-top: 3px solid #3cb2a5;
+  background-color: #384859;  
+}
+
+.social-icons li a { 
+  font-size: 18px; 
+  color: #fff;
+  transition: 0.5s ease;
+}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -148,9 +200,18 @@ li {
 /*media query starts*/
 /*media query for 1024px starts here*/
 @media only screen and (min-width: 1024px) {
+  .facebook:hover::before { color: #3b579c; }
 
+  .twitter:hover::before { color: #45aae1; }
 
+  .googleplus:hover::before{ color: #ea4335; }
 
+  .instagram:hover::before { color: #bf0071; }
+
+  .menu li a:hover {
+    border-top: 3px solid #3cb2a5;
+    background-color: #384859;  
+  }
 }  
 
 /*media query for 995px starts here*/
