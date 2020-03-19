@@ -141,13 +141,41 @@ li {
 
 
 
- /*=================================
+/*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+
+
+
+}  
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+
+
+
+}  
+
+/*media query for 767px starts here*/
+@media only screen and (max-width: 767px) {
+
+
+
+}  
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+
+
+
+}  
+
+/*media query for 340px starts here*/
+@media only screen and (max-width: 340px) {
 
 
 
