@@ -232,13 +232,68 @@ h2 span {
 /*=================================
   tours section styling starts here
 =================================*/ 
+.tours .wrapper { width: 89.6%; }
 
+.tours figure { position: relative; }
 
+.tours {
+  top: -74px;
+  position: relative;
+  padding-bottom: 119px;
+}
 
+.tours ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
 
+.tours li { 
+  width: 31.7%;
+  position: relative;
+}
 
+.tours span {
+  position: absolute;
+  bottom: 54px;
+  left: 20%;
+  display: block;
+  color: #fff;
+  font: bold 24px 'sans-serif';
+  text-align: center;  
+  text-transform: capitalize;  
+}
 
+.tours div {
+  margin-top: 39px;
+  text-align: center; 
+}
 
+.tours a {
+  position: relative;
+  color: #000;
+  font: normal 17px 'sans-serif';
+  letter-spacing: 0.5px;
+  text-transform: capitalize;  
+  -webkit-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+
+.arrow::after {
+  content: "\f061";
+  position: absolute;
+  top: 1px;
+  right: -20px;
+  bottom: 0;
+  font-family: 'FontAwesome';
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 /*=================================
   tours section styling ends here
 =================================*/
@@ -273,9 +328,18 @@ h2 span {
 
   .twitter:hover::before { color: #45aae1; }
 
-  .googleplus:hover::before{ color: #ea4335; }
+  .googleplus:hover::before { color: #ea4335; }
 
   .instagram:hover::before { color: #bf0071; }
+
+  .tours a:hover, .tours a:hover::after { color: #3cb2a5; }
+
+  .tours a:hover::after { animation: arrow 0.5s alternate; }
+
+  @keyframes arrow{
+    0%    {  right: -20px;  }
+    100%  {  right: -30px;  }
+  } 
 
   .menu li a:hover {
     border-top: 3px solid #3cb2a5;
@@ -286,7 +350,7 @@ h2 span {
     border: 2px solid #3cb2a5;
     background-color: #3cb2a5;
     color: #fff;
-  }
+  }  
 }  
 
 /*media query for 995px starts here*/
