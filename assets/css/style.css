@@ -126,8 +126,14 @@ header { background-color: #1f3145; }
 
 header .wrapper {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;  
 }
 
@@ -138,6 +144,8 @@ header .wrapper {
   font-size: 17px;
   letter-spacing: 1px; 
   text-transform: capitalize;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: 1;
 }
@@ -151,6 +159,8 @@ header .wrapper {
   font-family: 'FontAwesome';
   float: right;
   text-indent: 0;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
@@ -162,6 +172,8 @@ header .wrapper {
 .social-icons li a { 
   font-size: 18px; 
   color: #fff;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 /*=================================
@@ -174,14 +186,46 @@ header .wrapper {
 /*=================================
   banner section styling starts here
 =================================*/
+.banner .wrapper { width: 100%; }
 
+.banner .slide { position: relative; }
 
+.white-button::first-letter { text-transform: capitalize; }
 
+.banner .banner-content {
+  margin-left: 5%;
+  position: absolute;
+  top: 30%;
+  bottom: 0;  
+  left: 0;
+  color: #fff;
+}
 
+.banner-content .uppercase {
+  display: block;
+  letter-spacing: 1px;
+  text-transform: uppercase;  
+}
 
+h2 {
+  margin: 8px 0 26px;
+  font: normal 63px 'sans-serif';
+  text-transform: capitalize;
+}
 
+h2 span {
+  font-weight: bold;
+  text-transform: capitalize;
+}
 
-
+.white-button {
+  padding: 17px 4.5%;
+  border: 2px solid;
+  color: #fff;
+  font-size: 17px;  
+  letter-spacing: 0.5px;
+  transition: 0.5s ease;
+}
 /*=================================
   banner section styling ends here
 =================================*/
@@ -224,6 +268,12 @@ header .wrapper {
   .menu li a:hover {
     border-top: 3px solid #3cb2a5;
     background-color: #384859;  
+  }
+
+  .white-button:hover {
+    border: 2px solid #3cb2a5;
+    background-color: #3cb2a5;
+    color: #fff;
   }
 }  
 
