@@ -544,7 +544,7 @@ h4 span:last-of-type {
 =================================*/ 
 .blogs-section-one .wrapper, .blogs-section-two .wrapper { width: 90%; }
 
-.blog, .blog figure { position: relative; }
+.blog, .blog figure, .blogs-list-slider { position: relative; }
 
 h5 .lowercase { text-transform: lowercase; }
 
@@ -552,6 +552,7 @@ h5 .lowercase { text-transform: lowercase; }
 
 .blogs-section-one, .blogs-section-two {
   padding-bottom: 135px;
+  position: relative;
   text-align: center;
 }
 
@@ -592,13 +593,103 @@ h5 {
 /*=================================
   gallery section one styling starts here
 =================================*/ 
+.gallery-section-one .wrapper, .gallery-section-two .wrapper { width: 95.5%; }
 
+.gallery-section-one, .gallery-section-two { background-color: #f7f7f7; }
 
+.gallery-section-one h3,  .gallery-section-two h3 {
+  padding-bottom: 18px;
+  margin: 0 41.5%;
+  background-color: #fff;
+  font: normal 14px 'sans-serif';
+  text-align: center; 
+}
 
+.gallery-slider figure { 
+  position:relative; 
+  -webkit-transition: all 0.5s ease; 
+  -o-transition: all 0.5s ease; 
+  transition: all 0.5s ease;
+}
 
+.gallery-lightbox {
+  width:100%;
+  padding: 25px;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.8);
+  cursor: pointer;
+}
 
+.gallery-lightbox img{
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: default;
+}
 
+.leftArrow, .rightArrow {
+  padding: 10px;
+  display: inline-block;
+  text-indent: -9999px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
 
+.leftArrow::before, .rightArrow::before{
+  position: absolute;
+  float: right;
+  font-family: 'FontAwesome';
+  cursor: pointer;
+  text-indent: 0;
+}
+
+.leftArrow::before {
+  content: "\f053";
+  top: 50%;
+  left: 20%;
+}
+
+.rightArrow::before{
+  content: "\f054";
+  top: 50%;
+  right: 20%;
+}
+
+.cancel {
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -9999px;
+  font-size: 40px; 
+}
+
+.cancel::before{
+  content: "\f057";
+  float: left;
+  color: #fff;
+  font-family: 'FontAwesome';
+  text-indent: 0;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.active { display: block; }
 /*=================================
   gallery section one styling ends here
 =================================*/ 
@@ -663,6 +754,29 @@ h5 {
     background-color: #fff;
     color: #000;
   }
+
+  .gallery-section-one .gallery-slider figure:hover:before {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer; 
+  }
+  
+  .gallery-section-one .gallery-slider figure:hover:after {
+    content: "\f00e";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    font: normal 100 30px 'FontAwesome';
+  }
+
+  .leftArrow, .rightArrow, .cancel { color: #3cb2a5; }
 }  
 
 /*media query for 995px starts here*/
