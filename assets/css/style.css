@@ -393,6 +393,32 @@ h3 {
 /*=================================
   team section styling starts here
 =================================*/ 
+.team .wrapper { width: 90%; }
+
+.team {
+  padding: 98px 0;
+  text-align: center;
+}
+.team-members {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.team .team-members img {
+  border: 13px solid #ccc;
+  border-radius: 50%;
+}
+
+.member-details span {
+  display: block;
+  text-transform: capitalize;
+}
+/*=================================
+  team section styling ends here
+=================================*/ 
+/*=================================
+  booking section styling starts here
+=================================*/ 
 
 
 
@@ -401,9 +427,8 @@ h3 {
 
 
 /*=================================
-  team section styling ends here
+  booking section styling ends here
 =================================*/ 
-
 /*=================================
   main styling ends here
 =================================*/
