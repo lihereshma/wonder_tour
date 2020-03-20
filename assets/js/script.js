@@ -10,7 +10,14 @@ function navShow() {
 }
 
 
-
+// Function for social links menu
+var ellipsis = document.querySelector ('.ellipsis');
+var click = document.querySelector ('.social-icons');
+ellipsis.addEventListener ('click',menuShow);
+function menuShow() {
+  click.classList.toggle('showMenu');
+  ellipsis.classList.toggle('dropDown');
+}
 
 
 
