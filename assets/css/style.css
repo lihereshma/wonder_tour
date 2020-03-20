@@ -542,13 +542,50 @@ h4 span:last-of-type {
 /*=================================
   blogs section one styling starts here
 =================================*/ 
+.blogs-section-one .wrapper, .blogs-section-two .wrapper { width: 90%; }
 
+.blog, .blog figure { position: relative; }
 
+h5 .lowercase { text-transform: lowercase; }
 
+.blogs-list-slider .slick-slide {  margin:  0 15px 0 15px; }
 
+.blogs-section-one, .blogs-section-two {
+  padding-bottom: 135px;
+  text-align: center;
+}
 
+.blogs-list-slider .slick-list {
+  margin: 0 -15px;
+  pointer-events: none;
+}
 
+.date {
+  color: #3cb2a5;
+  font: bold 16px 'sans-serif';
+  text-transform: uppercase; 
+}
 
+.blog-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 40px 5% 34px;
+  position: absolute;
+  bottom: -30px;
+  left: 10%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  letter-spacing: 1px;
+  text-align: center; 
+}
+
+h5 {
+  margin-bottom: 23px;
+  font: bold 23px 'sans-serif'; 
+  text-transform: capitalize; 
+}
 /*=================================
   blogs section one styling ends here
 =================================*/ 
