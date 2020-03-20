@@ -537,9 +537,6 @@ h4 span:last-of-type {
   counter section styling ends here
 =================================*/ 
 /*=================================
-  main styling ends here
-=================================*/
-/*=================================
   blogs section one styling starts here
 =================================*/ 
 .blogs-section-one .wrapper, .blogs-section-two .wrapper { width: 90%; }
@@ -692,8 +689,10 @@ h5 {
 .active { display: block; }
 /*=================================
   gallery section one styling ends here
+=================================*/
+/*=================================
+  main styling ends here
 =================================*/ 
-
 /*=================================
   footer styling starts here
 =================================*/ 
