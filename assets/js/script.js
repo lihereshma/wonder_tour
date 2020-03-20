@@ -121,6 +121,7 @@ window.onload = function() {
 
 window.onscroll =function() {
   scroll();
+  tourCounter();
 }
 
 // Function for scroll to top button
@@ -139,6 +140,32 @@ function scrollTop(){
   document.documentElement.scrollTop = 0;
 }
 
+
+function tourCounter(){
+  var pos = document.querySelector('.counter').scrollHeight;
+	if(pos > 225){
+		var counter = document.querySelectorAll('.counting');
+		var speed = 100;
+		var counterArray = Array.from(counter);
+		counterArray.forEach(function(element){
+			var updateCounter = function() {
+				var target = parseInt(element.getAttribute("data-target"));
+				var count = parseInt(element.innerHTML);
+				var increment = target/speed;
+				if(count < target){
+					element.innerHTML = Math.ceil(count + increment); 
+					setTimeout(updateCounter,1);
+				}
+				else{
+					count.innerHTML = target;
+				}
+			}
+			updateCounter();
+		});
+	}	
+}
+
+
 // Function for banner slider
 $(document).ready (function() {
   $('.banner-slider').slick ({
@@ -151,9 +178,7 @@ $(document).ready (function() {
   });
 });
 
-
-
-// slider function
+// blogs slider function
 $(document).ready (function() {
 	$('.blogs-list-slider').slick ({
 		dots:true,
@@ -190,7 +215,42 @@ $(document).ready (function() {
 	});  
 });
 
-
+// blogs slider function
+$(document).ready (function() {
+	$('.gallery-slider').slick ({
+		dots:true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 5,
+    slidesToScroll: 2,
+    arrows: false,
+		// Responsive carousel
+		responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: false,
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
+	});  
+});
 
 
 
