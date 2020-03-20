@@ -87,8 +87,21 @@ previous.addEventListener('click',function(){
 	imageModal.children[0].src = imageSource;
 });
 
+// Function for scroll to top button
+var btn = document.getElementById('top');
+window.onscroll = function(){
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.classList.add('showBtn');
+  } else {
+    btn.classList.remove('showBtn');
+  }
+}
 
-
+btn.addEventListener('click',scrollTop);
+function scrollTop(){
+	document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 
 
