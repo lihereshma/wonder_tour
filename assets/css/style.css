@@ -466,13 +466,73 @@ h4 span:last-of-type {
 /*=================================
   counter section styling starts here
 =================================*/ 
+.counter { padding: 80px 0px; } 
 
+.counter .wrapper { width: 89.7%; } 
 
+.counter-content span { display: block; }
 
+.more { position: relative; }
 
+.more span { display: inline-block; }
 
+.counter ul li:last-of-type .counter-content { padding: 61px 29%; }
 
+.counter ul li:nth-of-type(2) .counter-content { padding: 73px 29%; }
 
+.counter, .counter figure, .counter-block { 
+  position: relative;
+  text-align: center;
+}
+
+.counter-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 61px 23%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  text-transform: capitalize;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);  
+}
+
+.counter ul {
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.plus {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  text-indent: -9999px; 
+}
+
+.plus::before{
+  content: "\f067";
+  float: right;
+  font: normal 48px 'FontAwesome';
+  text-indent: 0;  
+}
+
+.counting {
+  margin-right: 25px;
+  font: bold 74px 'sans-serif';
+}
+
+.counter-tag {
+  margin-top: 11px;
+  font: bold 22px 'sans-serif';
+}
 /*=================================
   counter section styling ends here
 =================================*/ 
