@@ -399,19 +399,51 @@ h3 {
   padding: 98px 0;
   text-align: center;
 }
+
 .team-members {
   margin-top: 45px;
   display: flex;
   justify-content: space-between;
 }
+.team-members li {
+  width: 23%;
+}
+
+.team-members li figure {
+  width: 48%;
+  margin: 0 25%;
+}
 .team .team-members img {
-  border: 13px solid #ccc;
   border-radius: 50%;
 }
+
+.member-details {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 39px 0 46px;
+  background-color: #f7f7f7;
+}
+
 
 .member-details span {
   display: block;
   text-transform: capitalize;
+}
+.name {
+  font-weight: bold;
+  font-size: 18px;
+}
+.post {
+  color: blue;
+    font: bold 14px 'sans-serif';
+    letter-spacing: 0.5px;
+    margin: 7px 0;
+}
+
+.contact-number a {
+  color: #000;
+    font-weight: bold;
+    font-size: 20px;
 }
 /*=================================
   team section styling ends here
@@ -721,13 +753,19 @@ footer a, footer span {
 }
 
 footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .privacy-terms a { 
   color: #606977;
   text-transform: capitalize;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -753,6 +791,8 @@ footer ul {
   color: #fff; 
   font: normal 15px 'FontAwesome';
   text-indent: 0; 
+  -webkit-transition: all 0.5s ease; 
+  -o-transition: all 0.5s ease; 
   transition: all 0.5s ease;
 }
 
