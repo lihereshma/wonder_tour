@@ -103,7 +103,35 @@ function scrollTop(){
   document.documentElement.scrollTop = 0;
 }
 
+// Function for about tabs
+var clicknode = document.getElementsByClassName("tab");
+var tabsName = document.querySelectorAll(".tab a");
+var images = document.querySelectorAll(".tab-data");
 
+var tabArray = Array.from(tabsName);
+tabArray.forEach(function(element){
+  element.addEventListener('click',function(e){
+    var text = e.target.text;
+    var currentTab = this;
+    tabsName.forEach(function(item) {
+      if (item == currentTab) {
+        item.classList.add("active-tab");
+      } 
+      else {
+        item.classList.remove("active-tab");
+      }
+    });
+    images.forEach(function(item) {
+      var attr = item.getAttribute("data-attribute");      
+      if (text === attr) {
+        item.classList.add("showTab");
+      }
+      else {
+        item.classList.remove("showTab");
+      }
+    });
+  });
+});
 
 
 
