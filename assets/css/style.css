@@ -419,13 +419,47 @@ h3 {
 /*=================================
   booking section styling starts here
 =================================*/ 
+.booking-content div { margin-top: 32px; }
 
+.booking-content p { line-height: 25px; }
 
+.booking a .lowercase { text-transform: lowercase; }
 
+.mobileView img { display: none; }
 
+.booking .wrapper {
+  width: 100%;
+  position: relative;
+}
 
+.booking-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+}
 
+.booking a { 
+  padding: 13px 33px;
+  text-transform: capitalize; 
+}
 
+h4 .bold {
+  display: block;
+  font: bold 47px 'sans-serif'; 
+  letter-spacing: 1px;
+}
+
+h4 span:last-of-type {
+  margin: 2px 0 20px;
+  display: block;
+  font-size: 47px; 
+  letter-spacing: 3px;
+}
 /*=================================
   booking section styling ends here
 =================================*/ 
