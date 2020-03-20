@@ -194,11 +194,11 @@ header .wrapper {
 
 .banner .banner-content {
   margin-left: 5%;
-  position: absolute;
-  top: 30%;
-  bottom: 0;  
+  position: absolute; 
+  top: 50%;
   left: 0;
   color: #fff;
+  transform: translate(0, -50%);
 }
 
 .banner-content .uppercase {
@@ -266,9 +266,9 @@ h2 span {
 }
 
 .tours span {
+  width: 100%;
   position: absolute;
   bottom: 54px;
-  left: 20%;
   display: block;
   color: #fff;
   font: bold 24px 'sans-serif';
@@ -821,9 +821,14 @@ footer .social-icons ul li a {
 
   .privacy-terms a:hover { color: #fff; }
 
-  .tours a:hover::after { animation: arrow 0.5s alternate; } 
+  .tours a:hover::after { -webkit-animation: arrow 0.5s alternate; animation: arrow 0.5s alternate; } 
 
   .leftArrow, .rightArrow, .cancel { color: #3cb2a5; }
+
+  @-webkit-keyframes arrow{
+    0%    {  right: -20px;  }
+    100%  {  right: -30px;  }
+  }
 
   @keyframes arrow{
     0%    {  right: -20px;  }
@@ -871,6 +876,8 @@ footer .social-icons ul li a {
   .gallery-section-one .gallery-slider figure:hover:after {
     content: "\f00e";
     position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
@@ -881,28 +888,337 @@ footer .social-icons ul li a {
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  /* header styling start */
+  .logo { display: block; }
 
+  header .wrapper { 
+    width: 90%;
+    padding: 30px 0; 
+  }
+  
+  header {
+    position: relative;
+    background-color: #fff;
+  }
+  
+  .menu { 
+    width: 100%;
+    height: 100vh;
+    position: absolute; 
+    z-index: 3;
+    top: 0;
+    right: 110%;
+    background-color: #1f3145;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
 
+  .show { 
+    width: 100%;
+    right: 0; 
+  }
 
+  .menu ul{
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;  
+  }
+
+  .menu ul li {
+    padding: 10px 0;
+    margin: 0; 
+    display: block; 
+  }
+
+  .menu li a {
+    padding: 8px 15px;
+    border-top: none;
+  }
+
+  .show .active-menu {
+    border: none;
+    background-color: #1f3145;
+    color: #3cb2a5;
+    font-weight: bold;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+  }
+
+  .bar {
+    content: '';
+    width: 40px;
+    margin: 10px 0;
+    display: block;
+    background-color: #000;
+    font-size: 3px;
+    text-indent: -99999px;
+    -webkit-transition:  0.5s ease;
+    -o-transition:  0.5s ease;
+    transition:  0.5s ease;
+  }
+  
+  .open .bar-three {
+    width: 25px; 
+    background-color: #3cb2a5; 
+    -webkit-transform: rotate(45deg) translatex(-9px); 
+    -ms-transform: rotate(45deg) translatex(-9px); 
+    transform: rotate(45deg) translatex(-9px);
+  }
+
+  .open .bar-two { background-color: #3cb2a5; }
+
+  .open .bar-one { 
+    width: 25px;
+    background-color: #3cb2a5; 
+    -webkit-transform: rotate(-45deg) translatex(-9px); 
+    -ms-transform: rotate(-45deg) translatex(-9px); 
+    transform: rotate(-45deg) translatex(-9px); 
+  }
+
+  .social-icons { display: none; }
+
+  .showMenu { 
+    display: block;
+    width: 5%;
+    background-color: #000;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    right: 2.7%;
+    border-radius: 50px;
+  }
+
+  .social-icons ul{
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .social-icons ul li {
+    margin: 0; 
+    padding: 10px 0;
+    display: block; 
+  }
+
+  .social-icons li a {
+    padding: 8px 15px;
+    border-top: none;
+    color: #fff;
+  }
+
+  .ellipsis {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    right: 5%;
+    z-index: 2;
+  }
+
+  .menu-wrap, .menu { cursor: pointer; }
+
+  .dot {
+    content: '';
+    width: 5px;
+    margin: 5px 0;
+    border-radius: 50%;
+    display: block;
+    background-color: #000;
+    font-size: 5px;
+    text-indent: -99999px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .dropDown {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 5px;
+  }
+
+  .dropDown .dot { background-color: #3cb2a5; }
+  /* header styling end */
+
+  .tours { position: static; }
+
+  .about .wrapper {  width: 90%; }
+
+  .team-members li { width: 34%; }
+
+  .desktopView img { display: none; }
+
+  .mobileView img { display: block; }
+
+  .booking-content { width: 64%; }
+  
+  footer .social-icons { display: block; }
+
+  footer .social-icons ul li {  margin: 0 20px; }
+
+  .privacy-terms {  margin: 0; }
+
+  .about-wrapper > li {
+    width: 100%;
+    display: block;
+  }
+
+  .about-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .team-members {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+
+  .counter ul, footer ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;  
+  }
+
+  .counter ul li {
+    width: 40%;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .social-icons ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0;
+  }
 }  
 
 /*media query for 767px starts here*/
 @media only screen and (max-width: 767px) {
+  .counter-content { padding: 20px 12%; }
 
+  .counter ul li:nth-of-type(2) .counter-content { padding: 32px 21%; }
 
+  .counter ul li:last-of-type .counter-content { padding: 18px 20%; }
 
+  .showMenu {
+    width: 6%;
+    right: 2.3%;
+  }
+
+  .tours ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;  
+  }
+
+  .tours ul li {
+    width: 50%;
+    margin-bottom: 20px;
+    position: relative;
+  }
 }  
 
 /*media query for 540px starts here*/
 @media only screen and (max-width: 540px) {
+  .banner-content .uppercase { font-size: 15px; }
 
+  .banner .white-button { font-size: 11px; }
 
+  h2 { font-size: 30px; }
 
+  h3 { font-size: 25px; }
+
+  .team-members li { width: 51%; }
+
+  .black-button, .white-button { font-size: 15px; }
+
+  h4 span:last-of-type, h4 .bold { font-size: 24px; }
+
+  .counter-content { padding: 17px 14%; }
+
+  .counter-tag { font-size: 15px; }
+
+  .plus::before { font-size: 20px; }
+
+  .plus { top: 13px; }
+
+  .showMenu {
+    width: 9%;
+    right: 1.2%;
+  }
+
+  .counting {
+    margin-right: 5px;
+    font-size: 44px;
+  }
 }  
 
 /*media query for 340px starts here*/
 @media only screen and (max-width: 340px) {
+  .about .blue-button {  margin: 10px 0; }
 
+  h3 ,.tab-content { text-align:center; }
+  
+  .desktopView img { display: block; }
+  
+  .blue-button { font-size: 15px; }
 
+  .tours ul li { width: 90%; }
 
+  footer .social-icons ul li { margin: 0 3px; }
+
+  .counter ul li { width: 66%; }
+
+  .showMenu {
+    width: 14%;
+    right: 0%;
+  }
+  
+  .tab-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+  }
+
+  .copyright span {
+    display: block;
+    margin-bottom: 10px;
+  }
 }  
