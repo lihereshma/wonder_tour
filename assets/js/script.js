@@ -145,7 +145,7 @@ function tourCounter(){
   var pos = document.querySelector('.counter').scrollHeight;
 	if(pos > 225){
 		var counter = document.querySelectorAll('.counting');
-		var speed = 100;
+		var speed = 1000;
 		var counterArray = Array.from(counter);
 		counterArray.forEach(function(element){
 			var updateCounter = function() {
@@ -164,7 +164,6 @@ function tourCounter(){
 		});
 	}	
 }
-
 
 // Function for banner slider
 $(document).ready (function() {
