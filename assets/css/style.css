@@ -696,13 +696,72 @@ h5 {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer .social-icons a { color: #606977; }
 
+footer .wrapper { width: 90%; }
 
+.privacy-terms { margin-left: 22%; }
 
+html { scroll-behavior: smooth; }
 
+.copyright span:first-of-type { text-transform: capitalize; }
 
+footer .social-icons ul li { margin: 2px 20px 0 0; }
 
+footer {
+  padding: 27px 0;
+  background-color: #1a293c;
+  color: #606977;
+  font-weight: bold;
+}
 
+footer a, footer span { 
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.privacy-terms a { 
+  color: #606977;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+
+.top-scroll { 
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.topBtn {
+  display: none;
+  text-indent: -9999px; 
+}
+
+.topBtn::before {
+  content: "\f077";
+  padding: 16px 1.5%;
+  border: 2px solid #3cb2a5;
+  position: fixed;
+  right: 3%;
+  bottom: 0;
+  background-color: #3cb2a5;
+  color: #fff; 
+  font: normal 15px 'FontAwesome';
+  text-indent: 0; 
+  transition: all 0.5s ease;
+}
+
+footer .social-icons ul li a {
+  color: #606977;
+  font-size: 15px;
+}
+
+.showBtn { display: block; }
 /*=================================
   footer styling ends here
 =================================*/ 
@@ -720,7 +779,11 @@ h5 {
 
   .tours a:hover, .tours a:hover::after { color: #3cb2a5; }
 
-  .tours a:hover::after { animation: arrow 0.5s alternate; }
+  .privacy-terms a:hover { color: #fff; }
+
+  .tours a:hover::after { animation: arrow 0.5s alternate; } 
+
+  .leftArrow, .rightArrow, .cancel { color: #3cb2a5; }
 
   @keyframes arrow{
     0%    {  right: -20px;  }
@@ -748,7 +811,7 @@ h5 {
     color: #fff;
   }
 
-  .blue-button:hover {
+  .blue-button:hover, .topBtn:hover::before {
     border: 2px solid;
     background-color: #fff;
     color: #000;
@@ -774,8 +837,6 @@ h5 {
     color: #fff;
     font: normal 100 30px 'FontAwesome';
   }
-
-  .leftArrow, .rightArrow, .cancel { color: #3cb2a5; }
 }  
 
 /*media query for 995px starts here*/
