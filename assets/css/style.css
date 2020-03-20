@@ -309,7 +309,7 @@ h2 span {
 /*=================================
   about section styling starts here
 =================================*/ 
-.about .tab-content > li:not(:first-child) { display: none; }
+/* .about .tab-content > li:not(:first-child) { display: none; } */
 
 .about .wrapper { width: 89%; }
 
@@ -387,6 +387,10 @@ h3 {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+.tab-data { display: none; }
+
+.showTab { display: block; }
 /*=================================
   about section styling ends here
 =================================*/ 
@@ -549,7 +553,7 @@ h4 span:last-of-type {
   text-indent: -9999px; 
 }
 
-.plus::before{
+.plus::before {
   content: "\f067";
   float: right;
   font: normal 48px 'FontAwesome';
@@ -622,6 +626,8 @@ h5 {
 /*=================================
   gallery section one styling starts here
 =================================*/ 
+.no-scroll { overflow: hidden; }
+
 .gallery-section-one .wrapper, .gallery-section-two .wrapper { width: 95.5%; }
 
 .gallery-section-one, .gallery-section-two { background-color: #f7f7f7; }
@@ -652,9 +658,10 @@ h5 {
   left: 0;
   background-color: rgba(0,0,0, 0.8);
   cursor: pointer;
+  z-index: 3;
 }
 
-.gallery-lightbox img{
+.gallery-lightbox img {
   width: 50%;
   position: absolute;
   left: 50%;
@@ -677,7 +684,7 @@ h5 {
   transition: 0.5s ease;
 }
 
-.leftArrow::before, .rightArrow::before{
+.leftArrow::before, .rightArrow::before {
   position: absolute;
   float: right;
   font-family: 'FontAwesome';
@@ -691,7 +698,7 @@ h5 {
   left: 20%;
 }
 
-.rightArrow::before{
+.rightArrow::before {
   content: "\f054";
   top: 50%;
   right: 20%;
@@ -707,7 +714,7 @@ h5 {
   font-size: 40px; 
 }
 
-.cancel::before{
+.cancel::before {
   content: "\f057";
   float: left;
   color: #fff;
@@ -719,6 +726,23 @@ h5 {
 }
 
 .active { display: block; }
+
+.gallery-slider .slick-slide {
+  margin-left:  15px;
+  margin-right:  15px;
+}
+
+.gallery-slider .slick-list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.slick-dots li button {
+  width: 8px;
+  height: 8px;
+  text-indent: -9999px;
+  background: #7c7c7c;
+}
 /*=================================
   gallery section one styling ends here
 =================================*/
@@ -997,19 +1021,19 @@ footer .social-icons ul li a {
     border-radius: 50px;
   }
 
-  .social-icons ul{
+  header .showMenu ul {
     width: 100%;
     text-align: center;
     padding-top: 60px;
   }
 
-  .social-icons ul li {
+  header .social-icons ul li {
     margin: 0; 
     padding: 10px 0;
     display: block; 
   }
 
-  .social-icons li a {
+  header .social-icons li a {
     padding: 8px 15px;
     border-top: none;
     color: #fff;
@@ -1107,7 +1131,7 @@ footer .social-icons ul li a {
     display: block;
   }
 
-  .social-icons ul {
+  footer .social-icons ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
